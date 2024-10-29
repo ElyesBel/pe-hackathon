@@ -86,17 +86,5 @@ for c in crit :
     plt.show()
 
 # %%
-a= df['Healthy life expectancy at birth'].max()
-df['healthy life exp norm']= df['Healthy life expectancy at birth']/a
-b= df['Life Ladder'].max()
-df['life ladder norm']= df['Life Ladder']/b
-df['non_corru']= 1-df['Perceptions of corruption']
-df['notre indice du bonheur'] = (
-    0.3 * df['healthy life exp norm'] +
-    0.3 * df['life ladder norm'] +
-    0.3 * df['Freedom to make life choices'] +
-    0.1 * df['non_corru']
-)
-df.head()
 
 # %%
